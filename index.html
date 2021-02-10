@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      .heading {
+        height: 2cm;
+        text-align: center;
+        color: cornsilk;
+        background-color: rgb(221, 72, 13);
+        font-style: bold;
+        font-weight: 1000;
+      }
+      .main {
+        background: rgb(92, 133, 84);
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+    <div class="container">
+      <div class="col main">
+        <div class="row p-3">
+          <div class="col heading display-4">Currency Convertor</div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="amount"
+                    id="textInput"
+                  />
+                </div>
+                <div class="col">
+                  <form>
+                    <select class="custom-select" id="currencies">
+                      <option value="INR">INR</option>
+                      <option value="USD">USD</option>
+                      <option value="EUR">EUR</option>
+                      <option value="RON">RON</option>
+                      <option value="AUD">AUD</option>
+                    </select>
+                  </form>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-block"
+                    id="getCurrency"
+                  >
+                    Get Currency
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row p-2">
+          <div class="col p-3" id="converted" style="font-size: 32px">
+            <div class="row" style="background: white">
+              <span class="offset-2 col-5"> Indian rupees </span>
+              <div class="col-5" id="i">rupees</div>
+            </div>
+            <div class="row" style="background: burlywood">
+              <div class="offset-2 col-5">US dollar</div>
+              <div class="col-5" id="us">$</div>
+            </div>
+            <div class="row" style="background: white">
+              <div class="offset-2 col-5">European</div>
+              <div class="col-5" id="cad">cad</div>
+            </div>
+            <div class="row" style="background: burlywood">
+              <div class="col-5 offset-2">Ringitt</div>
+              <div class="col-5" id="ring" style="background: burlywood">
+                Ringitt
+              </div>
+            </div>
+            <div class="row" style="background: white">
+              <div class="col-5 offset-2">Australian dollar</div>
+              <div class="col-5" id="aud">Aud</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
